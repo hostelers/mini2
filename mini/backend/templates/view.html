@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>student dashboard</title>
+  <link rel="stylesheet" href="{% static '/demo.css' %}">
+  <script src="https://kit.fontawesome.com/9379b0ea35.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+
+<h1>STUDENT GRIEVANCE PORTAL</h1>
+
+
+
+<!-- Horizontal Navbar -->
+
+  <div class="horizontal-nav" id="hnavbar">
+      
+     
+      <ul>
+       
+          <li><a href="home.html">HOME</a> 
+          <li><a href="about.html">ABOUT</a>
+          <li><a href="contact.html">CONTACT</a>
+          <li><a href="reset.html">RESET PASSWORD</a> 
+            <li><a href="index.html">LOG OUT</a> 
+          
+         
+             
+             
+           
+      </ul>
+      
+    
+  </div>
+
+  
+
+
+
+
+
+<!-- Vertical Navbar -->
+
+<div class="vertical-nav">
+  <div class="sidebar">
+      <ul>
+          <li><a href="submissimform.html"><i class="fa-solid fa-plus"></i>NEW CPMPLAINT</a>
+              <li><a href="view.html"><i class="fa-solid fa-eye"></i>VIEW COMPLAINT</a>
+              <li><a href="noti.html"><i class="fa-solid fa-bell"></i>NOTIFICATION</a>
+              <li><a href="feed.html"><i class="fa-solid fa-comment"></i>FEEDBACK</a>
+      </ul>
+  </div>
+</div>
+
+
+<!-- Main Content Area -->
+<div class="view">
+    <h2>Complaints Viewer</h2>
+    <table>
+        <tr>
+            <th>Complaint ID</th>
+            <th>Status</th>
+            <th>Date of Submission</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Open</td>
+            <td>2024-02-17</td>
+            <td><span class="details-link" onclick="viewDetails(1)">View Details</span></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Progress</td>
+            <td>2024-02-16</td>
+            <td><span class="details-link" onclick="viewDetails(2)">View Details</span></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Resolved</td>
+            <td>2024-02-15</td>
+            <td><span class="details-link" onclick="viewDetails(3)">View Details</span></td>
+        </tr>
+        <!-- Add more rows as needed -->
+    </table>
+    
+    <div id="details-modal" style="display: none;">
+        <h2>Complaint Details</h2>
+        <p id="complaint-details"></p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+    </div>>
+
+<style>
+    table {
+    width: 86%;
+    border-collapse: collapse;
+    margin-left: 210px;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f2f2f2;
+}
+
+.details-link {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+
+</style>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>student dashboard</title>
+  <link rel="stylesheet" href="{% static '/demo.css' %}">
+  <script src="https://kit.fontawesome.com/9379b0ea35.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+
+<h1>STUDENT GRIEVANCE PORTAL</h1>
+
+
+
+<!-- Horizontal Navbar -->
+
+  <div class="horizontal-nav" id="hnavbar">
+      
+     
+      <ul>
+       
+          <li><a href="home.html">HOME</a> 
+          <li><a href="about.html">ABOUT</a>
+          <li><a href="contact.html">CONTACT</a>
+          <li><a href="reset.html">RESET PASSWORD</a> 
+            <li><a href="index.html">LOG OUT</a> 
+          
+         
+             
+             
+           
+      </ul>
+      
+    
+  </div>
+
+  
+
+
+
+
+
+<!-- Vertical Navbar -->
+
+<div class="vertical-nav">
+
+  
+  <div class="sidebar">
+      <ul>
+          <li><a href="submissimform.html"><i class="fa-solid fa-plus"></i>NEW CPMPLAINT</a>
+              <li><a href="view.html"><i class="fa-solid fa-eye"></i>VIEW COMPLAINT</a>
+              <li><a href="noti.html"><i class="fa-solid fa-bell"></i>NOTIFICATION</a>
+              <li><a href="feed.html"><i class="fa-solid fa-comment"></i>FEEDBACK</a>
+      </ul>
+  </div>
+</div>
+
+
+<!-- Main Content Area -->
+<div class="container">
+    <h2>Complaint Submission Form</h2>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+        <div class="form-group">
+            <label for="type">Type of Complaint</label>
+            <select id="type" name="type" required>
+                <option value="">Select Type</option>
+                <option value="Product">Academic Grievances</option>
+                <option value="Service">Facility Issues</option>
+                <option value="Delivery">Residential Life</option>
+                <option value="Other">Safety and Security</option>
+                <option value="Other">Administrative Processes</option>
+                <option value="Other">Technology Problems</option>
+                <option value="Other">Student Conduct</option>
+                <option value="Other">Health and Wellness</option>
+                <option value="Other">Environmental Concerns</option>
+                <option value="Other">Transportation</option>
+                <option value="Other">Others</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="description">Description of Complaint</label>
+            <textarea id="description" name="description" required style="width: 566px; height:440px;"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="documents">Upload Documents</label>
+            <input type="file" id="documents" name="documents">
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+<style>
+   .container {
+    max-width: 100%;
+    
+    margin-left: 200px;
+  
+    padding: 20px;
+    
+  width: 75%; /* Set the width of the border */
+  height: 850px; /* Set the height of the border */
+  border: 2px solid black; /* Set the border style, width, and color */
+  padding: 20px; /* Add padding inside the border */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+
+  
+}
+
+.container h2 {
+    text-align: center;
+    color: black;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.form-container {
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color:black;
+    width: 150px;
+    margin-right: 10px;
+}
+
+input[type="text"],
+select,
+textarea,
+input[type="file"] {
+    flex: 1; /* Take remaining space */
+    padding: 5px; /* Adjust padding for input elements */
+}
+
+input[type="submit"] {
+    background-color: #4caf50;
+   
+    color:black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+</style>
+
+
+
+
+
+
+
+
+</body>
+</html>

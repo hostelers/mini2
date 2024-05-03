@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>student dashboard</title>
+  <link rel="stylesheet" href="{% static '/demo.css' %}">
+  <script src="https://kit.fontawesome.com/9379b0ea35.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+
+<h1>STUDENT GRIEVANCE PORTAL</h1>
+
+
+
+<!-- Horizontal Navbar -->
+
+  <div class="horizontal-nav" id="hnavbar">
+      
+     
+      <ul>
+       
+          <li><a href="home.html">HOME</a> 
+          <li><a href="about.html">ABOUT</a>
+          <li><a href="contact.html">CONTACT</a>
+          <li><a href="reset.html">RESET PASSWORD</a> 
+            <li><a href="index.html">LOG OUT</a> 
+          
+         
+             
+             
+           
+      </ul>
+      
+    
+  </div>
+
+  
+
+
+
+
+
+<!-- Vertical Navbar -->
+
+<div class="vertical-nav">
+  <div class="sidebar">
+      <ul>
+          <li><a href="submissimform.html"><i class="fa-solid fa-plus"></i>NEW CPMPLAINT</a>
+              <li><a href="view.html"><i class="fa-solid fa-eye"></i>VIEW COMPLAINT</a>
+              <li><a href="noti.html"><i class="fa-solid fa-bell"></i>NOTIFICATION</a>
+              <li><a href="feed.html"><i class="fa-solid fa-comment"></i>FEEDBACK</a>
+      </ul>
+  </div>
+</div>
+
+
+<!-- Main Content Area -->
+<div>
+  
+
+
+    <div class="feedback-container">
+        <h2>Student Feedback Form</h2>
+        <form class="feedback-form">
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating">
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Average</option>
+                <option value="4">4 - Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" style="width:946px; height: 224px;"></textarea>
+
+            <input type="checkbox" id="anonymous" name="anonymous">
+            <label for="anonymous">Submit Anonymously</label>
+
+            <input type="submit" value="Submit Feedback" class="submit-btn">
+        </form>
+
+        <div class="thank-you-message" style="display: none;">
+            <p>Thank you for your feedback!</p>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    /* Add your custom CSS styles here */
+.feedback-container {
+    max-width: 1000px;
+    max-height: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:white;
+    margin-top: 100px;
+}
+
+.feedback-form label {
+    display: block;
+    margin-bottom: 10px;
+    color: #f44336; /* Adjusted from original position */
+}
+
+.feedback-form input[type="text"],
+.feedback-form textarea,
+.feedback-form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.feedback-form .submit-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feedback-form .submit-btn:hover {
+    background-color: #45a049;
+}
+
+</style>
+
+
+
+
+
+
+
+
+</body>
+</html>

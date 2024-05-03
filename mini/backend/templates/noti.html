@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>student dashboard</title>
+  <link rel="stylesheet" href="{% static '/demo.css' %}">
+  <script src="https://kit.fontawesome.com/9379b0ea35.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+
+<h1>STUDENT GRIEVANCE PORTAL</h1>
+
+
+
+<!-- Horizontal Navbar -->
+
+  <div class="horizontal-nav" id="hnavbar">
+      
+     
+      <ul>
+       
+          <li><a href="home.html">HOME</a> 
+          <li><a href="about.html">ABOUT</a>
+          <li><a href="contact.html">CONTACT</a>
+          <li><a href="reset.html">RESET PASSWORD</a> 
+            <li><a href="index.html">LOG OUT</a> 
+          
+         
+             
+             
+           
+      </ul>
+      
+    
+  </div>
+
+  
+
+
+
+
+
+<!-- Vertical Navbar -->
+
+<div class="vertical-nav">
+  <div class="sidebar">
+      <ul>
+          <li><a href="submissimform.html"><i class="fa-solid fa-plus"></i>NEW CPMPLAINT</a>
+              <li><a href="view.html"><i class="fa-solid fa-eye"></i>VIEW COMPLAINT</a>
+              <li><a href="noti.html"><i class="fa-solid fa-bell"></i>NOTIFICATION</a>
+              <li><a href="feed.html"><i class="fa-solid fa-comment"></i>FEEDBACK</a>
+      </ul>
+  </div>
+</div>
+
+
+<!-- Main Content Area -->
+<div class="notification-container">
+    <!-- New Complaint Submission Notification -->
+    <div class="notification">New complaint submitted: Your complaint has been received.</div>
+
+    <!-- Complaint Status Updates Notification -->
+    <div class="notification">Complaint status update: Your complaint has moved to "In Progress".</div>
+
+    <!-- New Comment or Response Notification -->
+    <div class="notification">New comment/response on your complaint: Please check for updates.</div>
+
+    <!-- Deadline Reminder Notification -->
+    <div class="notification">Deadline reminder: Submit additional information by [deadline date].</div>
+
+    <!-- Feedback Request Notification -->
+    <div class="notification">Feedback request: Share your experience with our complaint website.</div>
+
+    <!-- Emergency Alert Notification -->
+    <div class="notification emergency">Emergency alert: Campus safety information.</div>
+
+    <!-- Acknowledgment of Complaint Submission Notification -->
+    <div class="notification">Complaint acknowledgment: Your complaint has been received.</div>
+
+    <!-- Important Announcement Notification -->
+    <div class="notification">Important announcement: [Announcement details].</div>
+</div>
+
+
+<style>
+    .notification-container{
+        margin-left: 250px;
+    }
+</style>
+
+
+
+
+
+</body>
+</html>

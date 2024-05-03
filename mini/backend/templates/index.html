@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Complaint Portal</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <script src="https://kit.fontawesome.com/9379b0ea35.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="port">
+            <h1>STUDENT COMPLAINT PORTAL</h1>
+            <h3>College Of Engineering Kallooppaara</h3>
+        </div>
+        <div class="form-box">
+            <div class="button">
+                <a href="{% url 'home' %}"><button type="button" id="supbtn">HOME</button></a>
+                <button type="button" id="supbtn">SIGN UP</button>
+                <button type="button" id="sinbtn" class="disable" action="abs">SIGN IN</button>
+            </div>
+
+
+            <h1 id="title">SIGN UP</h1>
+            <form method="post" action="{% url 'signup' %}">
+                {% csrf_token %}
+                
+                <div class="inputgroup">
+                    <div class="inputfield">
+                        <i class="fa-solid fa-user"></i>
+                        <!-- Display field-specific errors -->
+                      
+                        <input type="text" placeholder="username" name="username" value="">
+                    </div>
+                    <div class="inputfield" id="efield">
+                        <i class="fa-solid fa-envelope"></i>
+                       
+                        <input type="email" placeholder="Email" name="email" value="">
+                    </div>
+                    <div class="inputfield">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" placeholder="Password" name="password1">
+                    </div>
+                    
+                    
+                    <p>
+                        Forgot password? <a href="#">CLICK HERE!</a>
+                    </p>
+                    <div class="bttm">
+                        <button type="submit" id="btn">REGISTER</button>
+                    </div>
+                </div>
+               
+            </form>
+            
+        </div>
+    </div>
+    <script>
+    // Get references to DOM elements
+    let sinbtn = document.getElementById("sinbtn");
+    let supbtn = document.getElementById("supbtn");
+    let efield = document.getElementById("efield");
+    let title = document.getElementById("title");
+    let registerBtn = document.getElementById("btn");
+
+    // Event listener for the sign-in button
+    sinbtn.onclick = function() {
+        // Hide email field and update title
+        efield.style.maxHeight = "0";
+        title.innerText = "SIGN IN";
+        // Disable sign-up button and enable sign-in button
+        supbtn.classList.add("disable");
+        sinbtn.classList.remove("disable");
+        // Change register button text to "SIGN IN"
+        registerBtn.innerText = "log IN";
+    };
+
+    // Event listener for the sign-up button
+    supbtn.onclick = function() {
+        // Show email field and update title
+        efield.style.maxHeight = "60px";
+        title.innerText = "SIGN UP";
+        // Change register button text to "REGISTER"
+        registerBtn.innerText = "REGISTER";
+        // Enable sign-up button and disable sign-in button
+        supbtn.classList.remove("disable");
+        sinbtn.classList.add("disable");
+    };
+</script>
+
+    
+</body>
+</html>
